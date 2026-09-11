@@ -1,4 +1,6 @@
 from Department import Department
+from Patient import Patient
+from Staff import Staff
 
 class Hospital:
     
@@ -16,3 +18,12 @@ class Hospital:
             "location": self.location,
             "Department_list": [department.to_dict() for department in self.Department_list]
         }
+ 
+p = Patient("John Doe", 30, "No known allergies")
+print(p.view_record())
+s = Staff("Dr. Smith", 45, "Cardiologist")
+print(s.view_info())
+d = Department("Cardiology")
+print(d.to_dict())
+hospital = Hospital("City Hospital", "New York")
+print(hospital.to_dict())
