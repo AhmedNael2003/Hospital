@@ -1,2 +1,2 @@
 # Hospital
-Hospital
+system Hospital python
